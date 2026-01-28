@@ -1,4 +1,7 @@
 {
+  "name": "agendamento",
+  "description": "Aplicação Web que agenda cortes de cabelo.",
+  "author": "Matheus Silva",
   "scripts": {
     "server": "json-server --watch server.json --port 3333"
   },
