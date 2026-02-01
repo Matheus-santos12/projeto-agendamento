@@ -25,6 +25,22 @@ export function hoursLoad({ date }) {
     list.classList.add(available ? "hour-available" : "hour-unavailable");
 
     list.textContent = hour;
+
+    if (hour === "8:00") {
+      hourHeaderAdd("Manhã");
+    } else if (hour === "13:00") {
+      hourHeaderAdd("Tarde");
+    } else if (hour === "18:00") {
+      hourHeaderAdd("Noite");
+    }
     hours.append(list);
   });
+}
+
+function hourHeaderAdd(title) {
+  const header = document.createElement("li");
+  header.classList.add("hour-period");
+  header.textContent = title;
+
+  hours.append(header);
 }
