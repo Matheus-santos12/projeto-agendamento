@@ -15,14 +15,14 @@ form.onsubmit = (event) => {
 
   try {
     // Recuperando o nome do cliente.
-    const name = clientName.value;
+    const name = clientName.value.trim();
 
     if (!name) {
       return alert("Por favor, informe o nome do cliente");
     }
 
     // Recupera o horário selecionado.
-    const hourSelected = document.querySelector(".hour.selected");
+    const hourSelected = document.querySelector(".hour-selected");
 
     if (!hourSelected) {
       return alert("Selecione um horário para o agendamento.");
